@@ -1,3 +1,11 @@
+import sys
+import os
+# Thêm dòng này để Streamlit Cloud tự nhận diện toàn bộ các file .py trong thư mục dự án
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+import streamlit as st
+# ... (Giữ nguyên toàn bộ phần code phía dưới của file app.py cũ của bạn)
+%%writefile app.py
 import streamlit as st
 import pandas as pd
 from database import load_data
